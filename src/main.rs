@@ -35,4 +35,10 @@ fn main() {
             uniq_counts.insert(value.to_owned(), count);
         }
     }
+
+    // Print them all to stdout
+    for value in uniq_counts.keys() {
+        let count = uniq_counts.get(value).unwrap();
+        println!("{} {}", count, value);
+    }
 }
