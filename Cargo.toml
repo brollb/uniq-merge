@@ -1,0 +1,6 @@
+[package]
+name = "uniq-merge"
+version = "0.1.0"
+authors = ["Brian Broll <brian.broll@vanderbilt.edu>"]
+
+[dependencies]
