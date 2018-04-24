@@ -37,7 +37,9 @@ fn main() {
     }
 
     // Print them all to stdout
-    for value in uniq_counts.keys() {
+    let mut sorted_keys:Vec<_> = uniq_counts.keys().collect();
+    sorted_keys.sort();
+    for value in sorted_keys {
         let count = uniq_counts.get(value).unwrap();
         println!("{} {}", count, value);
     }
