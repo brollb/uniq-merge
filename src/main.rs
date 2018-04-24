@@ -32,7 +32,7 @@ fn main() {
             if uniq_counts.contains_key(value) {
                 count += uniq_counts.get(value).unwrap();
             }
-            uniq_counts.insert(value.to_owned(), count.clone());
+            uniq_counts.insert(value.to_owned(), count);
         }
     }
 }
