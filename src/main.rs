@@ -22,7 +22,6 @@ fn main() {
         let file = BufReader::new(file);
 
         for line in file.lines() {
-            //let line = line.unwrap();
             let mut chunks = line.as_ref().unwrap().split_whitespace();
 
             let count_str = chunks.next().unwrap();
@@ -33,7 +32,7 @@ fn main() {
             if uniq_counts.contains_key(value) {
                 count += uniq_counts.get(value).unwrap();
             }
-            uniq_counts.insert(value.clone(), count.clone());
+            uniq_counts.insert(value.to_owned(), count.clone());
         }
     }
 }
